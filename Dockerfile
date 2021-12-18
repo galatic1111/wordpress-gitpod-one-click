@@ -18,3 +18,6 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 
 RUN chmod +x wp-cli.phar
 RUN sudo mv wp-cli.phar /usr/local/bin/wp
+RUN curl -fsSL https://deno.land/x/install/install.sh | sh
+RUN export DENO_INSTALL="/home/gitpod/.deno"
+RUN export PATH="$DENO_INSTALL/bin:$PATH"
